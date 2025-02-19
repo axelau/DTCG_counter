@@ -81,6 +81,37 @@
             color: black;
             cursor: default;
         }
+
+        /* 針對 iPhone 和其他移動設備的媒體查詢 */
+        @media screen and (max-width: 844px) {
+            .container {
+                width: 90%;
+                height: 90vh;
+                padding: 20px 0;
+            }
+
+            .button {
+                width: 60px;
+                height: 60px;
+                min-width: 60px;
+                min-height: 60px;
+                font-size: 20pt;
+                margin: 3px;
+            }
+
+            .button-row {
+                gap: 8px;
+            }
+
+            #buttonContainer {
+                gap: 20px;
+            }
+
+            .title {
+                font-size: 28pt;
+                margin-bottom: 30px;
+            }
+        }
     </style>
 </head>
 <body>
