@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>按鈕練習</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 36pt;
+            margin-bottom: 50px;
+        }
+
+        #buttonContainer {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .button {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 300;
+            padding: 0;
+            margin: 5px;
+            font-size: 24pt;
+            cursor: pointer;
+            background-color: #87d189;
+            color: rgb(48, 48, 48);
+            border: none;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            min-width: 80px;
+            min-height: 80px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 1;
+            box-sizing: border-box;
+        }
+
+        .button.clicked {
+            background-color: #006f77;
+            color: black;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Digimon Card Counter</h1>
+        <div id="buttonContainer">
+            <div class="button-row">
+                <button class="button" onclick="handleClick(this)">-12</button>
+                <button class="button" onclick="handleClick(this)">-11</button>
+                <button class="button" onclick="handleClick(this)">-10</button>
+                <button class="button" onclick="handleClick(this)">-9</button>
+                <button class="button" onclick="handleClick(this)">-8</button>
+                <button class="button" onclick="handleClick(this)">-7</button>
+                <button class="button" onclick="handleClick(this)">-6</button>
+                <button class="button" onclick="handleClick(this)">-5</button>
+                <button class="button" onclick="handleClick(this)">-4</button>
+                <button class="button" onclick="handleClick(this)">-3</button>
+                <button class="button" onclick="handleClick(this)">-2</button>
+                <button class="button" onclick="handleClick(this)">-1</button>
+            </div>
+            <div class="button-row">
+                <button class="button" onclick="handleClick(this)">0</button>
+            </div>
+            <div class="button-row">
+                <button class="button" onclick="handleClick(this)">1</button>
+                <button class="button" onclick="handleClick(this)">2</button>
+                <button class="button" onclick="handleClick(this)">3</button>
+                <button class="button" onclick="handleClick(this)">4</button>
+                <button class="button" onclick="handleClick(this)">5</button>
+                <button class="button" onclick="handleClick(this)">6</button>
+                <button class="button" onclick="handleClick(this)">7</button>
+                <button class="button" onclick="handleClick(this)">8</button>
+                <button class="button" onclick="handleClick(this)">9</button>
+                <button class="button" onclick="handleClick(this)">10</button>
+                <button class="button" onclick="handleClick(this)">11</button>
+                <button class="button" onclick="handleClick(this)">12</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleClick(clickedButton) {
+            // 移除所有按鈕的 clicked 類
+            document.querySelectorAll('.button').forEach(button => {
+                button.classList.remove('clicked');
+            });
+            
+            // 為被點擊的按鈕添加 clicked 類
+            clickedButton.classList.add('clicked');
+        }
+    </script>
+</body>
+</html>
